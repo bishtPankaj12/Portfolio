@@ -1,0 +1,910 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: rgb(8, 8, 8);
+    /* background-image: linear-gradient(130deg, rgb(18, 17, 17) , rgb(8, 8, 77)); */
+
+}
+
+
+/* from here navbar designing begen */
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 0;
+    background-color: #d43684;
+    height: 55px;
+    font-weight: 500;
+    font-style: normal;
+    /* max-width: 1800px; */
+    z-index: 2;
+    position: fixed;
+}
+
+/* styling for header logo  when the size of the screen is  less then and equal to 1000px...*/
+a.logo {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    margin-left: -100px;
+}
+
+/* styling for header logo  when the size of the screen is  more then 1000px...*/
+@media(min-width:1024px) {
+
+    a.logo {
+        margin-right: 40px;
+        position: relative;
+        top: initial;
+        left: initial;
+        margin-left: initial;
+    }
+}
+
+a {
+    margin-right: 15px;
+}
+
+.logo {
+    text-transform: capitalize;
+    color: #0a3718;
+    font-size: 35px;
+    font-weight: 500;
+    padding-left: 50px;
+}
+
+/* center navegation elements  */
+.center-nav a {
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 50px;
+    cursor: pointer;
+    color: white;
+}
+
+/* styling  for center navegation bar  for hiding its elements when the size of the screen is less then and equal to 1000px... */
+.center-nav {
+    display: none;
+    margin-left: 30px;
+}
+
+/* styling for center navegation and right navegation bar for showing its elements when the size of the screen is  more then 1000px...*/
+@media(min-width:1024px) {
+    .center-nav {
+        display: block;
+    }
+}
+
+.hamburger {
+    position: absolute;
+    z-index: 4;
+    right: 6px;
+    top: 11px;
+    padding: 8px 8px;
+    background-color: #d43684;
+    cursor: pointer;
+}
+
+/* code for styling hamburger lines  ... */
+.hamburger span {
+    display: block;
+    width: 20px;
+    margin: 2px 0;
+    height: 2px;
+    background-color: white;
+    position: relative;
+    transition: all 0.2s linear;
+}
+
+
+/* code for making cross(X) when the user touch the hamburger.. */
+.hamburger.active span:first-child,
+.hamburger.active span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    transform: rotate(-45deg);
+    top: -4px;
+}
+
+/* its disappear the last line of the hamburger.. */
+.hamburger.active span:last-child {
+    opacity: 0;
+}
+
+/* this code slide the mobile navigation bar to the right side of the screen when we click on the hamburger element.. */
+nav.mobile-nav.active {
+    right: 0;
+}
+
+nav.mobile-nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    bottom: 0;
+    z-index: 3;
+    width: 300px;
+    padding-top: 30px;
+    padding-right: 10px;
+    background-color: black;
+    color: white;
+}
+
+nav.mobile-nav a:first-child {
+    margin-top: 35px;
+}
+
+/* styling  the element of the  the mobile navigation..  */
+nav.mobile-nav a {
+    display: block;
+    opacity: 0;
+    border-bottom: 1px solid #222;
+    text-transform: uppercase;
+    padding: 16px 0px;
+    text-decoration: none;
+    text-align: right;
+    transition: opacity .3s linear;
+    transition-delay: .2s;
+    cursor: pointer;
+}
+
+/* giving opacity 1 for all the element of the mabile navegation for displaying is elements  */
+nav.mobile-nav.active a {
+    opacity: 1;
+}
+
+/* giving delay to every elements for better animation.. */
+nav.mobile-nav a:nth-child(2) {
+    transition-delay: .25s;
+}
+
+nav.mobile-nav a:nth-child(3) {
+    transition-delay: .3s;
+}
+
+nav.mobile-nav a:nth-child(4) {
+    transition-delay: .35s;
+}
+
+nav.mobile-nav a:nth-child(5) {
+    transition-delay: .4s;
+}
+
+/* this code is for giving underline with better animation to all the elements of navigation bar */
+.center-nav a::before,
+.right-nav a::before {
+    content: '';
+    width: 0;
+    right: 0;
+    bottom: -3px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    transition: width .2s linear;
+}
+
+/* this code is for giving underline with better animation to all the elements of navigation bar */
+.center-nav a:hover::before,
+.right-nav a:hover::before {
+    width: 100%;
+    right: initial;
+    left: 0;
+}
+
+/* from here home section start */
+.home-section {
+    min-height: 100vh;
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 7% 0;
+    font-family: sans-serif;
+    color: #ffff;
+}
+
+@media(min-width:1024px) {
+    .home-section {
+        padding-top: 60px;
+    }
+}
+
+.home-content h3 {
+    font-size: 45px;
+    font-weight: 500;
+    margin-bottom: 18px;
+    letter-spacing: 5px;
+    color: #ffff;
+}
+
+.home-content {
+    padding: 5px 15px;
+    max-width: 1000px;
+}
+
+.home-content h1 {
+    font-size: 55px;
+    font-weight: 700;
+    color: #9cfe07;
+    line-height: 1;
+    margin-bottom: 0px 0;
+}
+
+.home-content h2 span {
+    color: #9cfe07;
+}
+
+#Iam {
+    line-height: 1.5;
+    margin-bottom: 18px;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.home-content p {
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    color: #ffff;
+}
+
+.home-content .downloadBtn {
+    position: relative;
+    top: 0px;
+    background-color: #9cfe07;
+    border: 1px solid #9cfe07;
+    height: 45px;
+    width: 225px;
+    padding: 3px;
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 40px;
+
+    &:hover {
+        background-color: #d43684;
+        cursor: pointer;
+        color: #9cfe07;
+    }
+}
+
+.home-section .downloadBtn a {
+    text-decoration: none;
+    color: #000;
+}
+
+.home-social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    color: #9cfe07;
+    font-size: 23px;
+    text-decoration: none;
+    margin: 40px 15px 20px 0;
+
+    &:hover {
+        background-color: #9cfe07;
+        color: #081b29;
+        box-shadow: 0 0 10px #9cfe07;
+    }
+}
+
+/* for right image circle */
+.home-image .outer-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 420px;
+    width: 420px;
+    border-radius: 50%;
+    border: 5px solid #9cfe07;
+    background: transparent;
+}
+
+.home-image .inner-circle {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background: url("./images/myimg.jpeg");
+    filter: contrast(100%), saturate(3);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .home-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 50px 5%;
+        width: 100%;
+    }
+
+    .home-content h1 {
+        font-size: 3rem;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+    }
+
+    .home-image {
+        padding: 45px 0;
+    }
+
+    .home-image .outer-circle {
+        height: 220px;
+        width: 220px;
+        border-radius: 50%;
+        border: 2px solid #9cfe07;
+    }
+
+    .home-image .inner-circle {
+        height: 210px;
+        width: 210px;
+        border-radius: 50%;
+        border: 1px solid #9cfe07;
+    }
+}
+
+/* from here about section begen */
+.about-section {
+    height: 90vh;
+    width: 100%;
+    color: #fff;
+    position: relative;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    flex-direction: row;
+    padding-bottom: 3rem;
+    gap: 1.5rem;
+}
+
+.about-information {
+    height: 350px;
+    width: 900px;
+    margin-top: 80px;
+    margin-left: 80px;
+    padding: 5px 10px;
+}
+
+.about-information h3 {
+    font-size: 70px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.about-information h3 span {
+    color: #9cfe07;
+}
+
+.about-information h2 {
+    margin-bottom: 13px;
+    font-size: 60px;
+    font-weight: 400;
+    color: #9cfe07;
+}
+
+.about-information p {
+    font-size: 20px;
+    line-height: 1.9;
+    letter-spacing: 1px;
+    color: #ffff;
+}
+
+@media screen and (max-width: 1024px) {
+    .about-section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 0;
+        height: 70vh;
+    }
+
+    .about-information {
+        max-width: 80vw;
+        margin: 20px 0;
+    }
+
+    .about-information h3 {
+        font-size: 40px;
+    }
+
+    .about-information h2 {
+        font-size: 35px;
+    }
+
+    .about-information p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .about-information {
+        max-width: 90vw;
+        text-align: center;
+    }
+
+    .about-information h3 {
+        font-size: 35px;
+    }
+
+    .about-information h2 {
+        font-size: 30px;
+    }
+
+    .about-information p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .about-information {
+        text-align: center;
+        max-width: 100vw;
+    }
+
+    .about-information h3 {
+        font-size: 30px;
+    }
+
+    .about-information h2 {
+        font-size: 25px;
+    }
+
+    .about-information p {
+        font-size: 12px;
+    }
+}
+
+/* from here service section begen */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+.service-section {
+    position: relative;
+    color: #ffff;
+    height: 60vh;
+    text-align: center;
+}
+
+.service-section h2 {
+    font-size: 50px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 2px;
+    color: #ffff;
+    padding-top: 30px;
+}
+
+.service-section h2 span {
+    padding-left: 20px;
+    color: #9cfe07;
+}
+
+.wrapper {
+    display: grid;
+    margin: 100px 90px auto;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+@media (max-width: 1024px) {
+    .service-section h2 {
+        padding-top: 10px;
+    }
+
+    .wrapper {
+        margin: 70px auto;
+    }
+}
+
+@media (min-width: 375px) {
+    .service-section h2 {
+        padding-top: 70px;
+    }
+}
+
+@media (max-width: 375px) {
+    .service-section h2 {
+        padding-top: 130px;
+    }
+ 
+}
+
+.wrapper .box {
+    width: 350px;
+    margin: 0 auto;
+    position: relative;
+    perspective: 1000px;
+
+}
+
+.wrapper .box .front-face {
+    background: #fff;
+    height: 220px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 5px 20px 0px rgba(255, 255, 255, 0.1);
+    transition: all 0.5s ease;
+}
+
+.box .front-face .icon {
+    height: 80px;
+}
+
+.box .front-face .icon i {
+    font-size: 65px;
+}
+
+.box .front-face span,
+.box .back-face span {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box .front-face .icon i,
+.box .front-face span {
+    background: linear-gradient(-135deg, #000, #000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.box .back-face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 220px;
+    width: 100%;
+    padding: 30px;
+    color: black;
+    opacity: 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    transform: translateY(110px) rotateX(-90deg);
+    box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+    transition: all 0.5s ease;
+}
+
+.box .back-face p {
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.box:hover .back-face {
+    opacity: 1;
+    transform: rotateX(0deg);
+}
+
+.box:hover .front-face {
+    opacity: 0;
+    transform: translateY(-110px) rotateX(90deg);
+}
+
+/* from here project section begen */
+
+.project-section {
+    position: relative;
+    color: white;
+    /* height: 90vh; */
+    margin-top: 70px;
+}
+
+@media (max-width: 1024px) {
+    .project-section {
+        margin-top: 250px;
+    }
+
+}
+
+@media(max-width: 720px) {
+    .project-section {
+        margin-top: 450px;
+    }
+}
+
+@media(max-width: 375px) {
+    .project-section h2 {
+        margin-top: 550px;
+        margin-left: 45px;
+    }
+}
+
+.project-section h2 {
+    font-size: 50px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 2px;
+    color: #fff;
+    padding-top: 70px;
+}
+
+.project-section h2 span {
+    padding-left: 20px;
+    color: #9cfe07;
+}
+
+/* Importing Google font - Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 1250px;
+    margin: 0px auto;
+    margin-top: 50px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card-list .card-item {
+    background: #ffff;
+    padding: 26px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: border 0.5s ease;
+}
+
+.card-list .card-item:hover {
+    border: 2px solid #000;
+}
+
+.card-list .card-item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card-list span {
+    display: inline-block;
+    background: #F7DFF5;
+    margin-top: 32px;
+    padding: 8px 15px;
+    font-size: 0.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.card-list .project-name-btn {
+    background-color: #9cfe07;
+    color: #000;
+}
+
+.card-item h3 {
+    color: #000;
+    font-size: 1.438rem;
+    margin-top: 28px;
+    font-weight: 600;
+}
+
+.card-item .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-35deg);
+    height: 40px;
+    width: 40px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-top: 40px;
+    transition: 0.2s ease;
+}
+
+.card-list .card-item:hover .arrow {
+    background: #9cfe07;
+    color: #000;
+}
+
+@media (max-width: 1200px) {
+    .card-list .card-item {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .card-list {
+        margin: 0 auto;
+    }
+}
+
+/* from here contact section begen */
+.contact-section {
+    position: relative;
+    min-height: 100vh;
+    background-position: center;
+    display: flex;
+    padding: 0px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.contact-container h2 {
+    color: #9cfe07;
+    font-size: 50px;
+    /* padding-top: 15px;
+    width: fit-content; */
+}
+
+.contact-container a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 28px;
+    width: fit-content;
+    transition: color 0.3s ease;
+}
+
+.contact-container a:hover {
+    color: #9cfe07;
+}
+
+.contact-container a i {
+    color: #fff;
+    margin-right: 15px;
+
+    &:hover {
+        color: #9cfe07;
+    }
+}
+
+.form-container {
+    background-color: #163544;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    border: 2px solid white;
+    max-width: 80%;
+}
+
+@media(max-width: 1150px) {
+    .form-container {
+        width: 450px;
+        margin: 20px;
+    }
+}
+
+@media(max-width: 768px) {
+    .form-container {
+        width: 50px;
+    }
+}
+
+.form-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-inner h2 {
+    font-size: 35px;
+    color: #9cfe07;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    font-size: 18px;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 100px;
+}
+
+button {
+    padding: 15px;
+    background-color: #9cfe07;
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d43684;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .contact-section {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-container {
+        align-items: center;
+    }
+
+    .form-container {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .form-inner h2 {
+        font-size: 28px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-container h2 {
+        font-size: 28px;
+        padding-top: 10px;
+    }
+
+    .contact-container a {
+        font-size: 18px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    .form-inner h2 {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
