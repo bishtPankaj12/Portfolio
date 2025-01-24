@@ -322,7 +322,7 @@ nav.mobile-nav a:nth-child(5) {
     height: 400px;
     width: 400px;
     border-radius: 50%;
-    background: url("./images/myimg.jpeg");
+    background: url("../images/myimg.jpeg");
     filter: contrast(100%), saturate(3);
     background-size: cover;
     background-repeat: no-repeat;
