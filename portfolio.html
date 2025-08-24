@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a class="logo">Portfolio</a>
+            <nav class="center-nav">
+                <a href="#home" class=" active nav-item" id="home">Home</a>
+                <a href="#about" class="nav-item" id="about">About</a>
+                <a href="#services" class="nav-item" id="service">Services</a>
+                <a href="#project" class="nav-item" id="project">Project</a>
+                <a href="#contact" class="nav-item" id="contact">Contact</a>
+            </nav>
+            <button class="hamburger" onclick="toggle()">
+                <!-- span tag are used for create the hamburger lines -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <!-- class mobile-nav are used to show the all the elements on the right side of the screen when we touch the hamburger elements  -->
+            <nav class="mobile-nav">
+                <a>Home</a>
+                <a>About</a>
+                <a>Service</a>
+                <a>Project</a>
+                <a>Contact</a>
+            </nav>
+        </header>
+
+        <!-- from here home section will start -->
+        <section id="home" class="home-section" >
+            <div class="home-content">
+                <h3 id="greet">Hello,I'm</h3>
+                <h1>Pankaj Bisht</h1>
+                <h2 id="Iam">And I'm a <span id="textJs"><span></h2>
+                <P>I'm a passionate web desinger and my expertise is to create<br>responsive user interfacesand website
+                    design,Frontend design<br> and many more...</P>
+                <div class="home-social">
+                    <a href="https://github.com/bishtPankaj12" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:bishtpankaj445@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="https://x.com/PankajB8449" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/pankaj-bisht-a3288b331/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <button class="downloadBtn"><a
+                        href="https://drive.google.com/file/d/1KlSXcemRHAkjcon1ELGOHMFtNlw_5_9m/view?usp=drive_link"
+                        target="_blank">Download CV</a></button>
+            </div>
+            <div class="home-image">
+                <div class="outer-circle">
+                    <div class="inner-circle"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Next page about section -->
+        <section id="about" class="about-section" >
+            <div class="about-information">
+                <h3>About <span>Me</span></h3>
+                <h2>Frontend Developer!</h2>
+                <p id="Para first">Hey! My name is Pankaj Bisht and I'm a web developer with a passion for front end
+                    development and design.I like to craft solid and scalable frontend products with great user
+                    experiences. I'm currently a third year student at Shri Guru Ram RAi University,Dehradun
+                    pursuing a degree in Bachelor of Computer Application (BCA) with a minor in interaction design.
+                    I aspire toward a career that will allow me to channel my creativity through crafting beautiful
+                    software and engaging experiences.
+                </p>
+                <p id="para second">I'm open to Job opportunities where I can contribute, learn and grow. If you
+                    have a good opportunity that matches my skills and experience then don't hesitate to contact me.
+                </p>
+            </div>
+        </section>
+        <!-- next page service section -->
+        <section id="services" class="service-section" >
+            <h2>My<span>Service</span></h2>
+            <div class="wrapper">
+                <div class="box">
+                    <div class="front-face">
+                        <div class="icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <span>Web Design</span>
+                    </div>
+                    <div class="back-face">
+                        <span>Web Design</span>
+                        <p>
+                            Professional web design services: responsive, creative, and user-friendly websites tailored
+                            to your business needs. Boost your online presence!
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="front-face">
+                        <div class="icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span>video editing</span>
+                    </div>
+                    <div class="back-face">
+                        <span>video editing</span>
+                        <p>
+                            Expert video designing services: creating intuitive, user-centered videos that enhance user experience and drive engagement for your brand.
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="front-face">
+                        <div class="icon">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                        </div>
+                        <span>Graphic Design</span>
+                    </div>
+                    <div class="back-face">
+                        <span>Graphic Design</span>
+                        <p>
+                            Creative graphic design services: eye-catching logos, branding, and visuals that effectively
+                            communicate your message and elevate your brand identity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- from here Project section begen -->
+        <section id="project" class="project-section" >
+            <h2>My<span> Projects</span></h2>
+            <div class="card-list">
+                <a href="https://github.com/bishtPankaj12" target="_blank" class="card-item">
+                    <img src="images/amazon.jpg" alt="Card Image">
+                    <span class="project-name-btn">Amazon Website Clone</span>
+                    <h3>Build a seamless Amazon clone with advanced features and user-friendly interface.</h3>
+                    <div class="arrow">
+                        <i class="fas fa-arrow-right card-icon"></i>
+                    </div>
+                </a>
+                <a href="https://github.com/bishtPankaj12" target="_blank" class="card-item">
+                    <img src="images/Spacex.jpg" alt="Card Image">
+                    <span class="project-name-btn">SpaceX Website Clone</span>
+                    <h3>Build a SpaceX clone website with cutting-edge space technology and design.</h3>
+                    <div class="arrow">
+                        <i class="fas fa-arrow-right card-icon"></i>
+                    </div>
+                </a>
+                <a href="https://github.com/bishtPankaj12" target="_blank" class="card-item">
+                    <img src="images/tic tac toe.jpg" alt="Card Image">
+                    <span class="project-name-btn">Tic Tac Toe Game</span>
+                    <h3>Create a fun, interactive Tic Tac Toe game with engaging gameplay.</h3>
+                    <div class="arrow">
+                        <i class="fas fa-arrow-right card-icon"></i>
+                    </div>
+                </a>
+                <a href="https://github.com/bishtPankaj12" target="_blank" class="card-item">
+                    <img src="images/parallax.jpg" alt="Card Image">
+                    <span class="project-name-btn">Parallax Effect</span>
+                    <h3>Create stunning websites with smooth, immersive parallax effect for depth.</h3>
+                    <div class="arrow">
+                        <i class="fas fa-arrow-right card-icon"></i>
+                    </div>
+                </a>
+                <a href="https://github.com/bishtPankaj12" target="_blank" class="card-item">
+                    <img src="images/responsive form.jpg" alt="Card Image">
+                    <span class="project-name-btn">Responsive Form</span>
+                    <h3>Design a responsive form that adapts seamlessly across all devices.</h3>
+                    <div class="arrow">
+                        <i class="fas fa-arrow-right card-icon"></i>
+                    </div>
+                </a>
+                <a href="https://github.com/bishtPankaj12" target="_blank" class="card-item">
+                    <img src="images/upcoming projects.jpg" alt="Card Image">
+                    <span class="project-name-btn">Upcoming Projects</span>
+                    <h3>Exciting projects coming soon, featuring innovative designs and impactful solutions</h3>
+                    <div class="arrow">
+                        <i class="fas fa-arrow-right card-icon"></i>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!-- from here contact section begen -->
+
+        <section id="contact" class="contact-section" >
+            <div class="contact-container">
+                <h2>Contact With Me</h2>
+                <a href="https://github.com/bishtPankaj12" target="_blank"><i class="fa-brands fa-github"></i>Github</a>
+                <a href="https://www.linkedin.com/in/pankaj-bisht-a3288b331/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i>LinkedIn</a>
+                <a href="https://x.com/PankajB8449" target="_blank"><i class="fa-brands fa-x-twitter"></i>Twitter</a>
+                <a href="mailto:bishtpankaj445@gmail.com" target="_blank"><i
+                        class="fa-regular fa-envelope"></i>Email</a>
+            </div>
+
+            <div class="form-container">
+                <div class="border">
+                    <div class="form-inner">
+                        <h2>Say Hi</h2>
+
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Name" required autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="E-mail" required autocomplete="off">
+                            <textarea name="#" id="message" placeholder="Message" required
+                                autocomplete="off"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button id="myFormSubmitBtn">Send <i class="fa-regular fa-paper-plane"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <!-- footer section -->
+    <footer>
+        <div>
+            <p>&copy; 2025 Pankaj Bisht. All rights reserved.</p>
+        </div>
+        <div>
+            <p>Designed & Developed by <strong>Pankaj Bisht</strong></p>
+        </div>
+    </footer>
+
+
+    <!-- Script JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#textJs', {
+            strings: ['Frontend Developer', 'Web Developer', 'Graphic Designer'],
+            typeSpeed: 50,
+            backSpeed: 50,
+            backDelay: 50
+        });
+    </script>
+    <script src="portfolio.js"></script>
+</body>
+
+</html>
